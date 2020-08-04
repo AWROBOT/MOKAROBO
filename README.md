@@ -5,6 +5,8 @@
 
 ## WIRING DIAGRAMS
 
+*Wire colors can be different*
+
 ### 1) LEFT WHEEL
  
  <img src="/images/Left_Wheel_bb.jpg" width="512px"/>
