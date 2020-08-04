@@ -5,7 +5,7 @@
 
 ## WIRING DIAGRAMS
 
-*Wire colors can be different*
+*Note: Wire colors can be different*
 
 ### 1) LEFT WHEEL
  
