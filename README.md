@@ -7,13 +7,13 @@
 
 *Note: Wire colors can be different*
 
-### 1) LEFT WHEEL
- 
- <img src="/images/Left_Wheel_bb.jpg" width="512px"/>
- 
- ### 2) RIGHT WHEEL
+ ### 1) RIGHT WHEEL
  
  <img src="/images/Right_Wheel_bb.jpg" width="512px"/>
+
+ ### 2) LEFT WHEEL
+ 
+ <img src="/images/Left_Wheel_bb.jpg" width="512px"/>
  
  ### 3) RGB LED MODULE
  
