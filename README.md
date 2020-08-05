@@ -30,10 +30,7 @@
  ### 6) BLUETOOTH MODULE
  
  <img src="/images/Bluetooth_Module_bb.jpg" width="512px"/>
- 
- ### ALL TOGETHER
- 
- <img src="/images/MOKAROBO_bb.jpg" width="512px"/>
+
  
  ## VIDEO
  
