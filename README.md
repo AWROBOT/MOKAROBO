@@ -35,3 +35,7 @@
  ## VIDEO
  
  [![MOKAROBO VIDEO](https://img.youtube.com/vi/FXuOdjHxScg/0.jpg)](https://www.youtube.com/watch?v=FXuOdjHxScg)
+ 
+  ## ASSEMBLY VIDEO
+ 
+ [![ASSEMBLY VIDEO](https://img.youtube.com/vi/6-aKzELZPAk/0.jpg)](https://www.youtube.com/watch?v=6-aKzELZPAk)
