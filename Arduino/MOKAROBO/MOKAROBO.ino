@@ -13,6 +13,8 @@
 #define PIN_Trigger     7
 #define PIN_Echo        8
 #define PIN_Buzzer      9
+#define PIN_Servo1      10
+#define PIN_Servo2      11
 
 const int distanceLimit = 20;           // Front distance limit in cm
 
@@ -25,6 +27,17 @@ bool isStopped = true;
 bool isRoaming = false;
 
 unsigned int distance;
+
+Servo servo1; 
+Servo servo2;
+
+int servo1_value = 90;
+int servo2_value = 90;
+
+const int max_servo1_value = 110;
+const int min_servo1_value = 70;
+const int max_servo2_value = 180;
+const int min_servo2_value = 0;
 
 void setup() 
 {
@@ -39,6 +52,12 @@ void setup()
   //US
   pinMode(PIN_Trigger, OUTPUT);
   pinMode(PIN_Echo, INPUT);
+
+  // SERVOS
+  servo1.attach(PIN_Servo1);
+  servo2.attach(PIN_Servo2);
+  servo1.write(90);
+  servo2.write(90);
   
   sing(S_superHappy);
 }
@@ -75,6 +94,9 @@ void ParseData(char data)
     {
         case 'I':
             Serial.println("init");
+
+            servo1.write(90);
+            servo2.write(90);
 
             sing(S_connection);
            
@@ -119,16 +141,12 @@ void ParseData(char data)
 
        case 'C':
             Serial.println("color");
-            analogWrite(PIN_Red, random(0,255));
-            analogWrite(PIN_Green, random(0,255));
-            analogWrite(PIN_Blue, random(0,255));
+            SetRandomLight();
             break;
 
        case 'D':
             Serial.println("no color");
-            analogWrite(PIN_Red, 0);
-            analogWrite(PIN_Green, 0);
-            analogWrite(PIN_Blue, 0);
+            SetLightOff();
             break;
 
        case 'X':
@@ -140,7 +158,89 @@ void ParseData(char data)
             Serial.println("talk");
             _sing(random(1, 20));
             break;
+
+       case '0':
+            Serial.println("drum left");
+            servo2.write(90);
+            delay(80);
+            servo2.write(140);
+            SetRandomLight();
+            delay(80);
+            servo2.write(90);
+            SetLightOff();
+            break;
+
+       case '1':
+            Serial.println("drum right");
+            servo1.write(90);
+            delay(80);
+            servo1.write(40);
+            SetRandomLight();
+            delay(80);
+            servo1.write(90);
+            SetLightOff();
+            break;
+
+       case '2':
+            Serial.println("drum both");
+            servo1.write(90);
+            servo2.write(90);
+            delay(80);
+            servo1.write(40);
+            servo2.write(140);
+            SetRandomLight();
+            delay(80);
+            servo1.write(90);
+            servo2.write(90);
+            SetLightOff();
+            break;
+
+       case '3':
+            Serial.println("shovel up");
+            servo1_value -= 10;
+            if(servo1_value < min_servo1_value)
+              servo1_value = min_servo1_value;
+            servo1.write(servo1_value);
+            break;
+
+       case '4':
+            Serial.println("shovel down");
+            servo1_value += 10;
+            if(servo1_value > max_servo1_value)
+              servo1_value = max_servo1_value;
+            servo1.write(servo1_value);
+            break;
+
+       case '5':
+            Serial.println("claw open");
+            servo2_value -= 20;
+            if(servo2_value < min_servo2_value)
+              servo2_value = min_servo2_value;
+            servo2.write(servo2_value);
+            break;
+
+       case '6':
+            Serial.println("claw close");
+            servo2_value += 20;
+            if(servo2_value > max_servo2_value)
+              servo2_value = max_servo2_value;
+            servo2.write(servo2_value);
+            break;
     }
+}
+
+void SetRandomLight()
+{
+    analogWrite(PIN_Red, random(0,255));
+    analogWrite(PIN_Green, random(0,255));
+    analogWrite(PIN_Blue, random(0,255));
+}
+
+void SetLightOff()
+{
+    analogWrite(PIN_Red, 0);
+    analogWrite(PIN_Green, 0);
+    analogWrite(PIN_Blue, 0);
 }
 
 ///////////////////////////////////////////////////////////////////

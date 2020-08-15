@@ -4,6 +4,36 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_bar_height"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/icon_nav"
+            android:visibility="visible">
+        </Button>
+
+        <TextView android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            style="@style/header_bar_title"
+            android:text="BASIC KIT"/>
+
+    </RelativeLayout>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -155,6 +185,115 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/white" />
 
+            <info.hoang8f.widget.FButton
+                android:id="@+id/claw_up_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="CLAW UP"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/claw_down_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="CLAW DOWN"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/claw_open_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="CLAW OPEN"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/claw_close_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="CLAW CLOSE"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/shovel_up_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="SHOVEL UP"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/shovel_down_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="SHOVEL DOWN"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/drum_left_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="HIT LEFT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/drum_right_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="HIT RIGHT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+            android:id="@+id/drum_both_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="HIT BOTH"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/play_song_button"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="PLAY SONG"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
 
         </GridLayout>
 
